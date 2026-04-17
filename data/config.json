@@ -1,0 +1,71 @@
+{
+  "app_name": "RoyalGuard AI \u2014 Digital License Royalty Auditor",
+  "version": "1.0.0",
+  "description": "Agentic contract intelligence and royalty leakage detection",
+  "data": {
+    "total_contracts": 1001,
+    "total_logs": 100000,
+    "total_payments": 1000,
+    "total_violations": 104
+  },
+  "leakage": {
+    "target": 52347.0,
+    "actual": 52347.01,
+    "currency": "USD"
+  },
+  "error_rates": {
+    "underpaid": "5%",
+    "overpaid": "3%",
+    "expired_license": "2%",
+    "territory_violation": "2%",
+    "clean": "88%"
+  },
+  "violation_counts": {
+    "UNDERPAYMENT": 42,
+    "OVERPAYMENT": 34,
+    "TERRITORY_VIOLATION": 16,
+    "EXPIRED_LICENSE": 12
+  },
+  "territories": [
+    "US,CA",
+    "US",
+    "IN,BR",
+    "JP,DE",
+    "UK,FR,AU",
+    "US,CA,UK",
+    "IN,JP,DE"
+  ],
+  "studios": [
+    "Warner Bros",
+    "Universal",
+    "Sony Music",
+    "Disney",
+    "Paramount",
+    "Netflix Originals",
+    "Indie Label",
+    "A24",
+    "Lionsgate",
+    "MGM"
+  ],
+  "countries": [
+    "US",
+    "CA",
+    "UK",
+    "IN",
+    "DE",
+    "JP",
+    "BR",
+    "AU",
+    "FR"
+  ],
+  "agents": [
+    "Planner Agent",
+    "Contract Reader Agent",
+    "Usage Agent",
+    "Royalty Agent",
+    "Ledger Agent",
+    "Audit Agent",
+    "Violation Agent",
+    "Reporter Agent"
+  ]
+}

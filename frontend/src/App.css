@@ -1,0 +1,1208 @@
+/* ═══════════════════════════════════════════════════════════════
+   RoyalGuard AI — Titan Design System v3.0
+   Enterprise-grade financial terminal with adaptive atmosphere
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  /* Core Palette */
+  --rg-bg-deep: #050811;
+  --rg-bg-primary: #0A0F1A;
+  --rg-bg-secondary: #0F1623;
+  --rg-bg-tertiary: #141D2E;
+  --rg-bg-elevated: #1A2438;
+  --rg-bg-card: #111827;
+  
+  /* RGB Channels — for Tailwind opacity modifier support (bg-rg-gold/10 etc.) */
+  --rg-bg-deep-rgb: 5 8 17;
+  --rg-bg-primary-rgb: 10 15 26;
+  --rg-bg-secondary-rgb: 15 22 35;
+  --rg-bg-tertiary-rgb: 20 29 46;
+  --rg-bg-elevated-rgb: 26 36 56;
+  --rg-bg-card-rgb: 17 24 39;
+  
+  /* Accent Colors */
+  --rg-accent-gold: #FFB800;
+  --rg-accent-gold-rgb: 255 184 0;
+  --rg-accent-gold-dim: rgba(255, 184, 0, 0.15);
+  --rg-accent-gold-glow: rgba(255, 184, 0, 0.4);
+  --rg-accent-cyan: #00D4AA;
+  --rg-accent-cyan-rgb: 0 212 170;
+  --rg-accent-cyan-dim: rgba(0, 212, 170, 0.15);
+  --rg-accent-rose: #FF4D6D;
+  --rg-accent-rose-rgb: 255 77 109;
+  --rg-accent-rose-dim: rgba(255, 77, 109, 0.15);
+  --rg-accent-violet: #8B5CF6;
+  --rg-accent-violet-rgb: 139 92 246;
+  --rg-accent-violet-dim: rgba(139, 92, 246, 0.15);
+  
+  /* Status Colors */
+  --rg-success: #10B981;
+  --rg-success-rgb: 16 185 129;
+  --rg-success-glow: rgba(16, 185, 129, 0.4);
+  --rg-warning: #F59E0B;
+  --rg-warning-rgb: 245 158 11;
+  --rg-warning-glow: rgba(245, 158, 11, 0.4);
+  --rg-danger: #EF4444;
+  --rg-danger-rgb: 239 68 68;
+  --rg-danger-glow: rgba(239, 68, 68, 0.4);
+  --rg-info: #3B82F6;
+  --rg-info-rgb: 59 130 246;
+  --rg-info-glow: rgba(59, 130, 246, 0.4);
+  
+  /* Text Colors */
+  --rg-text-primary: #FFFFFF;
+  --rg-text-primary-rgb: 255 255 255;
+  --rg-text-secondary: #A1A1AA;
+  --rg-text-secondary-rgb: 161 161 170;
+  --rg-text-tertiary: #71717A;
+  --rg-text-tertiary-rgb: 113 113 122;
+  --rg-text-muted: #52525B;
+  --rg-text-muted-rgb: 82 82 91;
+  
+  /* Border Colors */
+  --rg-border-subtle: rgba(255, 255, 255, 0.05);
+  --rg-border-default: rgba(255, 255, 255, 0.08);
+  --rg-border-default-rgb: 255 255 255;
+  --rg-border-highlight: rgba(255, 255, 255, 0.12);
+  --rg-border-accent: rgba(255, 184, 0, 0.3);
+  
+  /* Gradients */
+  --rg-gradient-gold: linear-gradient(135deg, #FFB800 0%, #FF8C00 100%);
+  --rg-gradient-cyan: linear-gradient(135deg, #00D4AA 0%, #00B4D8 100%);
+  --rg-gradient-rose: linear-gradient(135deg, #FF4D6D 0%, #FF6B9D 100%);
+  --rg-gradient-dark: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  --rg-gradient-shine: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  
+  /* Shadows */
+  --rg-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --rg-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --rg-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --rg-shadow-gold: 0 0 40px rgba(255, 184, 0, 0.15);
+  --rg-shadow-cyan: 0 0 40px rgba(0, 212, 170, 0.15);
+  
+  /* Spacing */
+  --rg-radius-sm: 6px;
+  --rg-radius-md: 10px;
+  --rg-radius-lg: 16px;
+  --rg-radius-xl: 24px;
+
+  /* Titan: Adaptive Mesh Health (JS-controlled) */
+  --mesh-health: 1;  /* 1 = healthy, 0 = critical */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME — Premium Financial Dashboard
+   Triggered by [data-theme="light"] on <html>
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] {
+  /* Core Palette — warm blue-gray */
+  --rg-bg-deep: #F5F6FA;
+  --rg-bg-primary: #EDEEF3;
+  --rg-bg-secondary: #E4E5EC;
+  --rg-bg-tertiary: #D8DAE3;
+  --rg-bg-elevated: #CDCFD9;
+  --rg-bg-card: #FFFFFF;
+  
+  /* RGB Channels — light mode */
+  --rg-bg-deep-rgb: 245 246 250;
+  --rg-bg-primary-rgb: 237 238 243;
+  --rg-bg-secondary-rgb: 228 229 236;
+  --rg-bg-tertiary-rgb: 216 218 227;
+  --rg-bg-elevated-rgb: 205 207 217;
+  --rg-bg-card-rgb: 255 255 255;
+  
+  /* Accent Colors — slightly deepened for contrast on light */
+  --rg-accent-gold: #C88500;
+  --rg-accent-gold-rgb: 200 133 0;
+  --rg-accent-gold-dim: rgba(200, 133, 0, 0.12);
+  --rg-accent-gold-glow: rgba(200, 133, 0, 0.25);
+  --rg-accent-cyan: #009D7F;
+  --rg-accent-cyan-rgb: 0 157 127;
+  --rg-accent-cyan-dim: rgba(0, 157, 127, 0.10);
+  --rg-accent-rose: #E03E5C;
+  --rg-accent-rose-rgb: 224 62 92;
+  --rg-accent-rose-dim: rgba(224, 62, 92, 0.10);
+  --rg-accent-violet: #7C3AED;
+  --rg-accent-violet-rgb: 124 58 237;
+  --rg-accent-violet-dim: rgba(124, 58, 237, 0.10);
+  
+  /* Status Colors — darkened for readability on light */
+  --rg-success: #059669;
+  --rg-success-rgb: 5 150 105;
+  --rg-success-glow: rgba(5, 150, 105, 0.25);
+  --rg-warning: #D97706;
+  --rg-warning-rgb: 217 119 6;
+  --rg-warning-glow: rgba(217, 119, 6, 0.25);
+  --rg-danger: #DC2626;
+  --rg-danger-rgb: 220 38 38;
+  --rg-danger-glow: rgba(220, 38, 38, 0.25);
+  --rg-info: #2563EB;
+  --rg-info-rgb: 37 99 235;
+  --rg-info-glow: rgba(37, 99, 235, 0.25);
+  
+  /* Text Colors — dark navy on light */
+  --rg-text-primary: #1A1D2B;
+  --rg-text-primary-rgb: 26 29 43;
+  --rg-text-secondary: #4A4D5C;
+  --rg-text-secondary-rgb: 74 77 92;
+  --rg-text-tertiary: #6B6E7D;
+  --rg-text-tertiary-rgb: 107 110 125;
+  --rg-text-muted: #9496A3;
+  --rg-text-muted-rgb: 148 150 163;
+  
+  /* Border Colors — dark-based for light backgrounds */
+  --rg-border-subtle: rgba(0, 0, 0, 0.06);
+  --rg-border-default: rgba(0, 0, 0, 0.10);
+  --rg-border-default-rgb: 0 0 0;
+  --rg-border-highlight: rgba(0, 0, 0, 0.16);
+  --rg-border-accent: rgba(200, 133, 0, 0.35);
+  
+  /* Gradients — adjusted for light backgrounds */
+  --rg-gradient-gold: linear-gradient(135deg, #D49A00 0%, #C07800 100%);
+  --rg-gradient-cyan: linear-gradient(135deg, #009D7F 0%, #0088A8 100%);
+  --rg-gradient-rose: linear-gradient(135deg, #E03E5C 0%, #D05680 100%);
+  --rg-gradient-dark: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, transparent 100%);
+  --rg-gradient-shine: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  
+  /* Shadows — softer on light */
+  --rg-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --rg-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.10);
+  --rg-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --rg-shadow-gold: 0 0 40px rgba(200, 133, 0, 0.12);
+  --rg-shadow-cyan: 0 0 40px rgba(0, 157, 127, 0.12);
+}
+
+/* ─── Glass Card — Light Mode ─── */
+[data-theme="light"] .glass-card {
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(245, 246, 250, 0.75) 100%
+  );
+  backdrop-filter: blur(32px) saturate(1.1);
+  -webkit-backdrop-filter: blur(32px) saturate(1.1);
+  border: 1px solid var(--rg-border-default);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .glass-card:hover {
+  border-color: var(--rg-border-highlight);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 1px 0 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Glass Card KPI — Light Mode ─── */
+[data-theme="light"] .glass-card-kpi {
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(245, 246, 250, 0.85) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.1);
+  -webkit-backdrop-filter: blur(40px) saturate(1.1);
+  border: 1px solid var(--rg-border-default);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .glass-card-kpi:hover {
+  border-color: var(--rg-border-highlight);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 1px 0 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Glass Sidebar — Light Mode ─── */
+[data-theme="light"] .glass-sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(245, 246, 250, 0.92) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.1);
+  -webkit-backdrop-filter: blur(40px) saturate(1.1);
+  border-right: 1px solid var(--rg-border-default);
+  box-shadow:
+    4px 0 32px rgba(0, 0, 0, 0.05),
+    inset -1px 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ─── Titan Mesh — Light Mode (reduce visibility) ─── */
+[data-theme="light"] .titan-mesh__blob {
+  opacity: 0.04;
+}
+
+[data-theme="light"] .titan-mesh__blob--1 {
+  background: var(--rg-accent-gold);
+  opacity: 0.05;
+}
+
+[data-theme="light"] .titan-mesh__blob--2 {
+  background: var(--rg-accent-cyan);
+  opacity: 0.04;
+}
+
+[data-theme="light"] .titan-mesh__blob--3 {
+  background: var(--rg-accent-violet);
+  opacity: 0.03;
+}
+
+[data-theme="light"] .titan-mesh__blob--health {
+  opacity: 0;
+}
+
+[data-theme="light"] .titan-mesh--fever .titan-mesh__blob--health {
+  opacity: 0.04;
+}
+
+[data-theme="light"] .titan-mesh--fever .titan-mesh__blob--1 {
+  background: var(--rg-accent-rose);
+  opacity: 0.04;
+}
+
+/* ─── Grid Pattern — Light Mode ─── */
+[data-theme="light"] .bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+[data-theme="light"] .bg-grid-pattern::before {
+  background: radial-gradient(ellipse at 50% 0%, rgba(200, 133, 0, 0.06) 0%, transparent 50%);
+}
+
+/* ─── Noise Overlay — Light Mode ─── */
+[data-theme="light"] .noise-overlay {
+  opacity: 0.015;
+}
+
+/* ─── Scrollbar — Light Mode ─── */
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--rg-bg-primary);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 133, 0, 0.3);
+}
+
+[data-theme="light"] .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 133, 0, 0.25);
+}
+
+/* ─── Selection — Light Mode ─── */
+[data-theme="light"] ::selection {
+  background: rgba(200, 133, 0, 0.2);
+  color: var(--rg-text-primary);
+}
+
+/* ─── Table Row Hover — Light Mode ─── */
+[data-theme="light"] .table-row-hover:hover {
+  background: linear-gradient(90deg,
+    rgba(200, 133, 0, 0.06) 0%,
+    transparent 100%);
+}
+
+/* ─── Chart Tooltip — Light Mode ─── */
+[data-theme="light"] .chart-tooltip {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid var(--rg-border-highlight) !important;
+  box-shadow: var(--rg-shadow-lg) !important;
+}
+
+/* ─── Skeleton — Light Mode ─── */
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg,
+    var(--rg-bg-tertiary) 0%,
+    var(--rg-bg-card) 50%,
+    var(--rg-bg-tertiary) 100%);
+  background-size: 200% 100%;
+}
+
+/* ─── Tilt Card Reflection — Light Mode ─── */
+[data-theme="light"] .tilt-card__reflection {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+/* ─── Shine Effect — Light Mode ─── */
+[data-theme="light"] .shine-effect::after {
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
+/* ─── Glow Effects — Light Mode (softer) ─── */
+[data-theme="light"] .glow-gold {
+  box-shadow: 0 0 30px rgba(200, 133, 0, 0.12);
+}
+
+[data-theme="light"] .glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 157, 127, 0.12);
+}
+
+[data-theme="light"] .glow-rose {
+  box-shadow: 0 0 30px rgba(224, 62, 92, 0.12);
+}
+
+/* ─── Progress Bar Glow — Light Mode ─── */
+[data-theme="light"] .progress-bar-glow {
+  box-shadow: 0 0 20px rgba(200, 133, 0, 0.15);
+}
+
+/* ─── Focus Visible — Light Mode ─── */
+[data-theme="light"] *:focus-visible {
+  outline: 2px solid var(--rg-accent-gold);
+  outline-offset: 2px;
+}
+
+/* ─── Body Background — Light Mode ─── */
+[data-theme="light"] body {
+  background: var(--rg-bg-deep);
+  color: var(--rg-text-primary);
+}
+
+
+/* ─── Base Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--rg-bg-deep);
+  color: var(--rg-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TITAN: Adaptive Mesh Background
+   
+   Multiple blurred blobs that drift slowly. Their color is
+   controlled by a CSS custom property (--mesh-health) set via JS.
+   health 1.0 → gold/cyan (normal)
+   health 0.0 → rose/danger (critical leakage)
+   ═══════════════════════════════════════════════════════════════ */
+
+.titan-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.titan-mesh__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.07;
+  will-change: transform;
+}
+
+/* Blob 1: Top-right — Primary accent */
+.titan-mesh__blob--1 {
+  width: 600px;
+  height: 600px;
+  top: -15%;
+  right: -10%;
+  background: var(--rg-accent-gold);
+  animation: mesh-drift-1 30s ease-in-out infinite;
+}
+
+/* Blob 2: Bottom-left — Secondary accent */
+.titan-mesh__blob--2 {
+  width: 500px;
+  height: 500px;
+  bottom: -10%;
+  left: -8%;
+  background: var(--rg-accent-cyan);
+  animation: mesh-drift-2 35s ease-in-out infinite;
+}
+
+/* Blob 3: Center — Subtle violet */
+.titan-mesh__blob--3 {
+  width: 400px;
+  height: 400px;
+  top: 35%;
+  right: 25%;
+  background: var(--rg-accent-violet);
+  opacity: 0.04;
+  animation: mesh-drift-3 25s ease-in-out infinite;
+}
+
+/* Blob 4: Health-reactive — turns rose when leakage is high */
+.titan-mesh__blob--health {
+  width: 700px;
+  height: 700px;
+  top: 10%;
+  left: 30%;
+  background: var(--rg-accent-rose);
+  opacity: 0;
+  transition: opacity 3s ease;
+  animation: mesh-drift-health 40s ease-in-out infinite;
+}
+
+/* When health is critical (class toggled by JS) */
+.titan-mesh--fever .titan-mesh__blob--health {
+  opacity: 0.06;
+}
+
+.titan-mesh--fever .titan-mesh__blob--1 {
+  background: var(--rg-accent-rose);
+  opacity: 0.05;
+}
+
+@keyframes mesh-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(1.08); }
+  66% { transform: translate(20px, -20px) scale(0.95); }
+}
+
+@keyframes mesh-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -25px) scale(0.92); }
+  66% { transform: translate(-15px, 15px) scale(1.05); }
+}
+
+@keyframes mesh-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(25px, -30px) scale(1.1) rotate(5deg); }
+}
+
+@keyframes mesh-drift-health {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-50px, 30px) scale(1.1); }
+  50% { transform: translate(30px, -20px) scale(0.9); }
+  75% { transform: translate(-20px, -10px) scale(1.05); }
+}
+
+/* ─── Grid overlay (subtle, sits on top of mesh) ─── */
+.bg-grid-pattern {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 184, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 184, 0, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── PulseWave Animations ── */
+.pulse-wave-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: wave-flow 2s linear infinite;
+}
+
+@keyframes wave-flow {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+.progress-bar-glow {
+  box-shadow: 0 0 20px rgba(255, 184, 0, 0.3);
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+/* ── Custom Scrollbar for Glass UI ── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 184, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 184, 0, 0.3);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* ── Progress Bar Glow ── */
+.progress-bar-glow {
+  box-shadow: 0 0 20px rgba(255, 184, 0, 0.3);
+}
+
+.bg-grid-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 184, 0, 0.06) 0%, transparent 50%);
+}
+
+/* ─── Noise Texture Overlay ─── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TITAN: Glass Card Effect v2.0
+   
+   Multi-layered frosted glass with:
+   • Deep backdrop blur (32px)
+   • Reflective top-left inner glow (simulates light source)
+   • Subtle gradient from top → bottom for depth
+   ═══════════════════════════════════════════════════════════════ */
+
+.glass-card {
+  background: linear-gradient(
+    165deg, 
+    rgba(17, 24, 39, 0.85) 0%, 
+    rgba(10, 15, 26, 0.75) 100%
+  );
+  backdrop-filter: blur(32px) saturate(1.2);
+  -webkit-backdrop-filter: blur(32px) saturate(1.2);
+  border: 1px solid var(--rg-border-default);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 1px 0 0 rgba(255, 255, 255, 0.03);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--rg-border-highlight);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ─── Glass Card — KPI edition (higher contrast) ─── */
+.glass-card-kpi {
+  background: linear-gradient(
+    165deg,
+    rgba(17, 24, 39, 0.9) 0%,
+    rgba(10, 15, 26, 0.8) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.3);
+  -webkit-backdrop-filter: blur(40px) saturate(1.3);
+  border: 1px solid var(--rg-border-default);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 1px 0 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-kpi:hover {
+  border-color: var(--rg-border-highlight);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ─── Glass Sidebar ─── */
+.glass-sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 22, 35, 0.92) 0%,
+    rgba(10, 15, 26, 0.88) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.3);
+  -webkit-backdrop-filter: blur(40px) saturate(1.3);
+  border-right: 1px solid var(--rg-border-default);
+  box-shadow:
+    4px 0 32px rgba(0, 0, 0, 0.3),
+    inset -1px 0 0 rgba(255, 255, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TITAN: 3D Tilt Card Support
+   
+   Uses CSS perspective and transform-style for depth.
+   The actual rotation values are set by the useTilt hook via
+   inline style: transform: rotateX(Xdeg) rotateY(Ydeg)
+   ═══════════════════════════════════════════════════════════════ */
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* The "reflection" layer sits inside the tilt card */
+.tilt-card__reflection {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tilt-card:hover .tilt-card__reflection {
+  opacity: 1;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rg-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rg-border-highlight);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rg-accent-gold-dim);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--rg-accent-gold-dim);
+  color: var(--rg-text-primary);
+}
+
+/* ─── Typography ─── */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-feature-settings: 'tnum' 1, 'zero' 1, 'ss01' 1;
+}
+
+/* ─── Shine Effect ─── */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--rg-gradient-shine);
+  transition: left 0.6s ease;
+}
+
+.shine-effect:hover::after {
+  left: 100%;
+}
+
+/* ─── Glow Effects ─── */
+.glow-gold {
+  box-shadow: 0 0 30px rgba(255, 184, 0, 0.2);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 212, 170, 0.2);
+}
+
+.glow-rose {
+  box-shadow: 0 0 30px rgba(255, 77, 109, 0.2);
+}
+
+/* ─── Animated Border ─── */
+.animated-border {
+  position: relative;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(135deg, 
+    var(--rg-accent-gold) 0%, 
+    transparent 30%,
+    transparent 70%,
+    var(--rg-accent-cyan) 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-border:hover::before {
+  opacity: 1;
+}
+
+/* ─── Status Indicators ─── */
+.status-pulse {
+  position: relative;
+}
+
+.status-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.4;
+  animation: status-pulse 2s ease-out infinite;
+}
+
+@keyframes status-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ─── Number Counter Animation ─── */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.count-animate {
+  animation: count-up 0.5s ease-out;
+}
+
+/* ─── Table Row Hover ─── */
+.table-row-hover {
+  transition: all 0.2s ease;
+}
+
+.table-row-hover:hover {
+  background: linear-gradient(90deg, 
+    rgba(255, 184, 0, 0.05) 0%, 
+    transparent 100%);
+  transform: translateX(4px);
+}
+
+/* ─── Chart Tooltip ─── */
+.chart-tooltip {
+  background: rgba(17, 24, 39, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--rg-border-highlight) !important;
+  border-radius: var(--rg-radius-md) !important;
+  box-shadow: var(--rg-shadow-lg) !important;
+}
+
+/* ─── Progress Bar ─── */
+.progress-bar-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-glow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+  animation: progress-shine 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-500%); }
+}
+
+/* ─── Gradient Text ─── */
+.gradient-text-gold {
+  background: var(--rg-gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: var(--rg-gradient-cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Button Styles ─── */
+.btn-primary {
+  background: var(--rg-gradient-gold);
+  color: var(--rg-bg-deep);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--rg-shadow-gold);
+  transform: translateY(-1px);
+}
+
+/* ─── Input Focus ─── */
+.input-glow:focus {
+  border-color: var(--rg-accent-gold);
+  box-shadow: 
+    0 0 0 1px rgba(255, 184, 0, 0.2),
+    0 0 20px rgba(255, 184, 0, 0.1);
+}
+
+/* ─── Card Hover Lift ─── */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--rg-shadow-lg);
+}
+
+/* ─── Sidebar Item ─── */
+.sidebar-item {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--rg-gradient-gold);
+  border-radius: 0 3px 3px 0;
+  transition: height 0.2s ease;
+}
+
+.sidebar-item.active::before,
+.sidebar-item:hover::before {
+  height: 60%;
+}
+
+/* ─── Agent Step Connector ─── */
+.step-connector {
+  position: relative;
+}
+
+.step-connector::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  bottom: -16px;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    var(--rg-accent-gold) 0%, 
+    var(--rg-border-default) 100%);
+}
+
+/* ─── Recharts Customization ─── */
+.recharts-surface {
+  overflow: visible !important;
+}
+
+.recharts-bar-rectangle {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* ─── Audit Toast ─── */
+.audit-toast-container {
+  background: linear-gradient(135deg, #0c1a0e 0%, #0a1a12 50%, #0c1a0e 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+[data-theme="light"] .audit-toast-container {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdf4 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 0 30px rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.25) !important;
+}
+
+/* ─── Dropdown Panels — Visual Clarity ─── */
+.dropdown-panel {
+  backdrop-filter: blur(40px) saturate(2) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(2) !important;
+}
+
+[data-theme="light"] .dropdown-panel {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 
+    0 10px 40px -10px rgba(0, 0, 0, 0.15),
+    0 0 0 1px var(--rg-border-default) !important;
+}
+
+[data-theme="dark"] .dropdown-panel {
+  background: rgba(13, 15, 23, 0.94) !important;
+  box-shadow: 
+    0 20px 60px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px var(--rg-border-highlight) !important;
+}
+
+
+/* ─── Focus Visible ─── */
+*:focus-visible {
+  outline: 2px solid var(--rg-accent-gold);
+  outline-offset: 2px;
+}
+
+/* ─── Loading Skeleton ─── */
+.skeleton {
+  background: linear-gradient(90deg, 
+    var(--rg-bg-tertiary) 0%, 
+    var(--rg-bg-elevated) 50%, 
+    var(--rg-bg-tertiary) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME — Additional Component Overrides
+   These override remaining hardcoded color values in components
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Input Focus Glow — Light Mode ─── */
+[data-theme="light"] .input-glow:focus {
+  border-color: var(--rg-accent-gold);
+  box-shadow:
+    0 0 0 1px rgba(200, 133, 0, 0.2),
+    0 0 20px rgba(200, 133, 0, 0.08);
+}
+
+/* ─── Chart Tooltip — Light Mode ─── */
+[data-theme="light"] .chart-tooltip {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 1px solid var(--rg-border-highlight) !important;
+  color: var(--rg-text-primary) !important;
+  box-shadow: var(--rg-shadow-lg) !important;
+}
+
+/* ─── Recharts Bars — Light Mode ─── */
+[data-theme="light"] .recharts-bar-rectangle {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* ─── Button Primary Overlay — Light Mode ─── */
+[data-theme="light"] .btn-primary::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
+}
+
+/* ─── Progress Bar Shine — Light Mode ─── */
+[data-theme="light"] .progress-bar-glow::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5));
+}
+
+/* ─── Animated Border — Light Mode ─── */
+[data-theme="light"] .animated-border::before {
+  background: linear-gradient(135deg,
+    var(--rg-accent-gold) 0%,
+    transparent 30%,
+    transparent 70%,
+    var(--rg-accent-cyan) 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME — Hardcoded Tailwind Color Patches
+   
+   These CSS rules override common hardcoded Tailwind patterns
+   that won't respond to CSS variables (e.g. text-white used for
+   UI text, hover:bg-white/5 for hover states, bg-black/30 for
+   code blocks and backdrops).
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Fix: hover:bg-white/5 is invisible on light mode */
+[data-theme="light"] [class*="hover\:bg-white"]:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix: bg-white/5, bg-white/10 subtle transparent overlays */
+[data-theme="light"] .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Fix: bg-black/30 used in code blocks / inline badges in contracts */
+[data-theme="light"] .bg-black\/30 {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Fix: bg-black\/80 used for backdrops — keep dark for overlays */
+/* (no change needed, dark overlays work on both themes) */
+
+/* Fix: text-cyan-300 / text-cyan-400 — too light for light mode */
+[data-theme="light"] .text-cyan-300 {
+  color: #0e7490 !important;
+}
+
+[data-theme="light"] .text-cyan-400 {
+  color: #0891b2 !important;
+}
+
+/* Fix: text-rose-300 / text-rose-400 — too light for light mode */
+[data-theme="light"] .text-rose-300 {
+  color: #be123c !important;
+}
+
+[data-theme="light"] .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* Fix: text-violet-300 / text-violet-400 */
+[data-theme="light"] .text-violet-300 {
+  color: #6d28d9 !important;
+}
+
+[data-theme="light"] .text-violet-400 {
+  color: #7c3aed !important;
+}
+
+/* Fix: text-emerald-300 / text-emerald-400 */
+[data-theme="light"] .text-emerald-300 {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .text-emerald-400 {
+  color: #059669 !important;
+}
+
+/* Fix: text-emerald-200 — used in contract ingest success text */
+[data-theme="light"] .text-emerald-200 {
+  color: #065f46 !important;
+}
+
+/* Fix: text-amber-300 / text-amber-400 */
+[data-theme="light"] .text-amber-300 {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .text-amber-400 {
+  color: #d97706 !important;
+}
+
+/* Fix: text-blue-300 / text-blue-400 */
+[data-theme="light"] .text-blue-300 {
+  color: #1d4ed8 !important;
+}
+
+[data-theme="light"] .text-blue-400 {
+  color: #2563eb !important;
+}
+
+/* Fix: bg-violet-500/10, bg-violet-500/20 — purple accent overlays */
+[data-theme="light"] [class*="bg-violet-500\/"] {
+  background-color: rgba(124, 58, 237, 0.08) !important;
+}
+
+/* Fix: bg-emerald-500/10, bg-emerald-500/20 */
+[data-theme="light"] [class*="bg-emerald-500\/"] {
+  background-color: rgba(5, 150, 105, 0.08) !important;
+}
+
+/* Fix: border-violet-500/20 */
+[data-theme="light"] [class*="border-violet-500\/"] {
+  border-color: rgba(124, 58, 237, 0.18) !important;
+}
+
+/* Fix: border-emerald-500/30 */
+[data-theme="light"] [class*="border-emerald-500\/"] {
+  border-color: rgba(5, 150, 105, 0.2) !important;
+}
