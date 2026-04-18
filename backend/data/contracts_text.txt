@@ -1,0 +1,460 @@
+
+================================================================================
+CONTRACT ID: C0001
+================================================================================
+Content Title : Movie_001
+Studio        : Sony Music
+Royalty Rate  : 15.4% of gross revenue
+Rate Per Play : $0.0619 per stream
+Territory     : US,CA,UK (Permitted countries: US, CA, UK)
+Contract Start: 2023-02-27
+Contract End  : 2023-09-20
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0381 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0381 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0002
+================================================================================
+Content Title : Movie_002
+Studio        : Disney
+Royalty Rate  : 13.1% of gross revenue
+Rate Per Play : $0.0122 per stream
+Territory     : UK,FR,AU (Permitted countries: UK, FR, AU)
+Contract Start: 2023-02-14
+Contract End  : 2024-10-18
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0070 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0070 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0003
+================================================================================
+Content Title : Movie_003
+Studio        : Warner Bros
+Royalty Rate  : 15.6% of gross revenue
+Rate Per Play : $0.0254 per stream
+Territory     : US (Permitted countries: US)
+Contract Start: 2023-11-29
+Contract End  : 2025-07-30
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0180 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0180 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0004
+================================================================================
+Content Title : Movie_004
+Studio        : Netflix Originals
+Royalty Rate  : 9.0% of gross revenue
+Rate Per Play : $0.0209 per stream
+Territory     : JP,DE (Permitted countries: JP, DE)
+Contract Start: 2023-06-24
+Contract End  : 2024-09-30
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0169 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0169 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $200.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0005
+================================================================================
+Content Title : Movie_005
+Studio        : Lionsgate
+Royalty Rate  : 9.2% of gross revenue
+Rate Per Play : $0.0665 per stream
+Territory     : IN,BR (Permitted countries: IN, BR)
+Contract Start: 2023-06-26
+Contract End  : 2024-09-18
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0497 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0497 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $200.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0006
+================================================================================
+Content Title : Movie_006
+Studio        : Warner Bros
+Royalty Rate  : 14.6% of gross revenue
+Rate Per Play : $0.0504 per stream
+Territory     : UK,FR,AU (Permitted countries: UK, FR, AU)
+Contract Start: 2023-05-31
+Contract End  : 2024-12-01
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0373 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0373 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $200.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0007
+================================================================================
+Content Title : Movie_007
+Studio        : Netflix Originals
+Royalty Rate  : 9.6% of gross revenue
+Rate Per Play : $0.0366 per stream
+Territory     : IN,JP,DE (Permitted countries: IN, JP, DE)
+Contract Start: 2023-04-30
+Contract End  : 2024-02-07
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0246 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0246 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $200.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0008
+================================================================================
+Content Title : Movie_008
+Studio        : Disney
+Royalty Rate  : 9.6% of gross revenue
+Rate Per Play : $0.0526 per stream
+Territory     : US,CA,UK (Permitted countries: US, CA, UK)
+Contract Start: 2023-05-17
+Contract End  : 2024-01-25
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0314 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0314 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $500.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0009
+================================================================================
+Content Title : Movie_009
+Studio        : Warner Bros
+Royalty Rate  : 10.3% of gross revenue
+Rate Per Play : $0.0579 per stream
+Territory     : US,CA,UK (Permitted countries: US, CA, UK)
+Contract Start: 2023-12-19
+Contract End  : 2025-01-26
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0450 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0450 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $500.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0010
+================================================================================
+Content Title : Movie_010
+Studio        : Netflix Originals
+Royalty Rate  : 10.1% of gross revenue
+Rate Per Play : $0.0248 per stream
+Territory     : JP,DE (Permitted countries: JP, DE)
+Contract Start: 2023-05-18
+Contract End  : 2024-01-20
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0200 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0200 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $500.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0011
+================================================================================
+Content Title : Movie_011
+Studio        : Lionsgate
+Royalty Rate  : 13.4% of gross revenue
+Rate Per Play : $0.0285 per stream
+Territory     : US,CA,UK (Permitted countries: US, CA, UK)
+Contract Start: 2023-08-23
+Contract End  : 2024-07-14
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0176 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0176 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0012
+================================================================================
+Content Title : Movie_012
+Studio        : Sony Music
+Royalty Rate  : 13.1% of gross revenue
+Rate Per Play : $0.0353 per stream
+Territory     : JP,DE (Permitted countries: JP, DE)
+Contract Start: 2023-10-26
+Contract End  : 2025-06-05
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0289 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0289 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $200.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0013
+================================================================================
+Content Title : Movie_013
+Studio        : Indie Label
+Royalty Rate  : 14.0% of gross revenue
+Rate Per Play : $0.0539 per stream
+Territory     : IN,JP,DE (Permitted countries: IN, JP, DE)
+Contract Start: 2023-02-26
+Contract End  : 2024-01-28
+Tier Threshold: 100,000 plays/month
+Tier Rate     : $0.0412 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 100,000.
+- Tier rate of $0.0412 applies when plays >= 100,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $500.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0014
+================================================================================
+Content Title : Movie_014
+Studio        : Warner Bros
+Royalty Rate  : 14.8% of gross revenue
+Rate Per Play : $0.0276 per stream
+Territory     : UK,FR,AU (Permitted countries: UK, FR, AU)
+Contract Start: 2023-08-28
+Contract End  : 2025-08-18
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0193 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0193 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0015
+================================================================================
+Content Title : Movie_015
+Studio        : A24
+Royalty Rate  : 8.0% of gross revenue
+Rate Per Play : $0.0178 per stream
+Territory     : UK,FR,AU (Permitted countries: UK, FR, AU)
+Contract Start: 2023-05-17
+Contract End  : 2024-10-26
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0119 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0119 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0016
+================================================================================
+Content Title : Movie_016
+Studio        : Paramount
+Royalty Rate  : 16.4% of gross revenue
+Rate Per Play : $0.0455 per stream
+Territory     : IN,BR (Permitted countries: IN, BR)
+Contract Start: 2023-09-14
+Contract End  : 2024-09-10
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0263 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0263 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0017
+================================================================================
+Content Title : Movie_017
+Studio        : Lionsgate
+Royalty Rate  : 17.2% of gross revenue
+Rate Per Play : $0.0634 per stream
+Territory     : US (Permitted countries: US)
+Contract Start: 2023-03-20
+Contract End  : 2024-10-02
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0441 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0441 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $500.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0018
+================================================================================
+Content Title : Movie_018
+Studio        : Paramount
+Royalty Rate  : 10.4% of gross revenue
+Rate Per Play : $0.0750 per stream
+Territory     : JP,DE (Permitted countries: JP, DE)
+Contract Start: 2023-01-10
+Contract End  : 2023-10-31
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0590 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0590 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0019
+================================================================================
+Content Title : Movie_019
+Studio        : Lionsgate
+Royalty Rate  : 15.7% of gross revenue
+Rate Per Play : $0.0671 per stream
+Territory     : US,CA (Permitted countries: US, CA)
+Contract Start: 2023-02-13
+Contract End  : 2024-12-21
+Tier Threshold: 50,000 plays/month
+Tier Rate     : $0.0546 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 50,000.
+- Tier rate of $0.0546 applies when plays >= 50,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
+
+================================================================================
+CONTRACT ID: C0020
+================================================================================
+Content Title : Movie_020
+Studio        : Indie Label
+Royalty Rate  : 17.6% of gross revenue
+Rate Per Play : $0.0286 per stream
+Territory     : JP,DE (Permitted countries: JP, DE)
+Contract Start: 2023-10-09
+Contract End  : 2024-09-22
+Tier Threshold: 250,000 plays/month
+Tier Rate     : $0.0225 per stream (above threshold)
+
+TERMS:
+- Royalties calculated monthly based on total play count.
+- Base rate applies when plays < 250,000.
+- Tier rate of $0.0225 applies when plays >= 250,000.
+- Streaming outside permitted territories constitutes a contract violation.
+- Usage after contract end date is strictly prohibited.
+- Minimum guarantee: $750.00 per quarter regardless of play count.
+================================================================================
+
