@@ -28,6 +28,9 @@ eggs/
 lib/
 lib64/
 parts/
+
+# Exception: Include frontend source lib folder (utility functions)
+!frontend/src/lib/
 sdist/
 var/
 wheels/
