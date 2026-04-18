@@ -17,13 +17,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 5000,
-    hmr: {
-      protocol: 'https',
-      host: 'localhost',
-      port: 443,
-    },
-    middlewareMode: false,
+    port: 5173,
   },
   build: {
     outDir: 'dist',
