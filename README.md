@@ -16,8 +16,10 @@ RoyalGuard AI is a high-performance auditing platform designed to detect financi
 
 ## 🏗️ Technical Stack
 - **Frontend**: React, Vite, Tailwind CSS, Framer Motion.
-- **Backend**: FastAPI (Python), SQLite (Persistent).
+- **Backend**: FastAPI (Python), PostgreSQL (Managed Database).
 - **AI**: Deep-reasoning agentic models.
+- **Real-time**: Server-Sent Events (SSE) for live data streaming.
+- **Authentication**: JWT with role-based access control (RBAC).
 
 ---
 
@@ -26,12 +28,15 @@ RoyalGuard AI is a high-performance auditing platform designed to detect financi
 This project is a monorepo containing both the `/frontend` and `/backend`.
 
 ### 1. Backend Deployment (Render.com)
-The backend requires a persistent filesystem to store the SQLite database.
-1. Create a **Web Service** on Render.
-2. Connect this repository and set **Root Directory** to `backend`.
-3. **Build Command**: `pip install -r requirements.txt`
-4. **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. **Disk**: Under the "Volumes" tab, mount a Persistent Disk at `/app/data`.
+1. Create a **PostgreSQL Database** on Render (use Render's managed PostgreSQL).
+2. Create a **Web Service** on Render and connect this repository.
+3. Set **Root Directory** to `backend`.
+4. **Build Command**: `pip install -r requirements.txt`
+5. **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+6. **Environment Variables**:
+   - `DATABASE_URL`: Your Render PostgreSQL connection string
+   - `STRIPE_SECRET_KEY`: Your Stripe API key
+   - `JWT_SECRET`: A strong random secret for authentication
 
 ### 2. Frontend Deployment (Vercel)
 1. Import this repository into Vercel and set **Root Directory** to `frontend`.
