@@ -4,7 +4,9 @@
 import os
 import psycopg2
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://neondb_owner:npg_VcKrwWZ14SfR@ep-bold-paper-ankrarx1.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require")
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL environment variable is required")
 
 def add_missing_columns():
     """Add proof_hash column if missing."""
