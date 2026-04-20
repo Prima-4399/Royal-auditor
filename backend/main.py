@@ -34,7 +34,9 @@ def convert_decimals_for_json(obj):
     return obj
 
 # PostgreSQL/Neon connection
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://neondb_owner:npg_VcKrwWZ14SfR@ep-bold-paper-ankrarx1.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require")
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL environment variable is required")
 
 # 🔥 CRITICAL: CORS Configuration - Must come BEFORE route definitions
 # Allows cross-origin requests from Vercel frontend + local development
