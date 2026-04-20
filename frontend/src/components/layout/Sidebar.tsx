@@ -31,6 +31,24 @@ const iconMap: Record<string, React.ElementType> = {
   BookOpen,
 };
 
+type Brand = {
+  name: string;
+  subtitle: string;
+  logo: string;
+};
+
+function getBrand(): Brand | null {
+  if (typeof window === 'undefined') return null;
+  const host = window.location.hostname.toLowerCase();
+  if (host.includes('persistent')) {
+    return { name: 'Persistent', subtitle: 'Systems', logo: '/Persistent_logo.png' };
+  }
+  if (host.includes('cogniify')) {
+    return { name: 'Cogniify', subtitle: 'Analytics', logo: '/cogniify_logo.png' };
+  }
+  return null;
+}
+
 interface SidebarProps {
   activeTab: TabId;
   onTabChange: (tab: TabId) => void;
@@ -42,6 +60,7 @@ interface SidebarProps {
 export function Sidebar({ activeTab, onTabChange, agentStatuses, version, appName }: SidebarProps) {
   const completedCount = agentStatuses.filter(s => s.status === 'COMPLETE').length;
   const progress = (completedCount / agentStatuses.length) * 100;
+  const brand = getBrand();
 
   return (
     <motion.aside 
@@ -55,6 +74,23 @@ export function Sidebar({ activeTab, onTabChange, agentStatuses, version, appNam
       
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full">
+        {/* Partner Brand Strip */}
+        {brand && (
+          <div className="px-6 pt-5 pb-3 border-b border-rg-border-default/40 flex items-center gap-2.5">
+            <img
+              src={brand.logo}
+              alt={`${brand.name} logo`}
+              className="w-6 h-6 object-contain shrink-0"
+            />
+            <div className="leading-tight">
+              <div className="text-sm font-semibold text-rg-text-primary">{brand.name}</div>
+              <div className="text-[9px] uppercase tracking-[0.18em] text-rg-text-muted">
+                {brand.subtitle}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Logo Section */}
         <div className="p-6 border-b border-rg-border-default">
           <motion.div 
